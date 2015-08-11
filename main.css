@@ -1,0 +1,62 @@
+.titlebar, .col-md-9 {
+    text-align: center;
+    border: 3px black solid;
+    height: 24rem;
+    padding: 0;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+.input, .story {
+    border: 3px black solid;
+    margin: 0 0;
+}
+
+.input {
+    font-size: 1.5rem;
+}
+
+.story {
+        font-size: 2rem;
+}
+
+.title {
+    padding: 0;
+}
+
+.input-container {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+input, .errorDiv {
+    margin: 0 1rem;
+}
+
+span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.handwriting {
+    font-family: 'Indie Flower', cursive;
+}
+
+.errorShow {
+    height: 3rem;
+    margin: 0;
+    color: rgba(235, 0, 0, 0.8);
+}
+
+.btn-primary {
+    margin: 2rem 1rem;
+}
+
+.btn-success {
+    margin-bottom: 1rem;
+}
