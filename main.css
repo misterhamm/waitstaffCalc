@@ -1,62 +1,62 @@
-.titlebar, .col-md-9 {
-    text-align: center;
-    border: 3px black solid;
-    height: 24rem;
-    padding: 0;
+.details-title, 
+.charges-title, 
+.earnings-title, 
+.form-container,
+.charges-info, 
+.earnings-info{
+    border: 3px solid black;
 }
 
-h1 {
-    font-size: 8rem;
+.earnings {
+    margin-top: 2rem;
 }
 
-.input, .story {
-    border: 3px black solid;
-    margin: 0 0;
+.btn {
+    margin-top: 6rem;
+    box-shadow: 4px 4px 1px rgba(50, 50, 50, 0.75);
 }
 
-.input {
-    font-size: 1.5rem;
-}
-
-.story {
-        font-size: 2rem;
-}
-
-.title {
-    padding: 0;
-}
-
-.input-container {
-    text-align: center;
-}
-
-.center {
-    margin: 0 auto;
-}
-
-input, .errorDiv {
-    margin: 0 1rem;
-}
-
-span {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.handwriting {
-    font-family: 'Indie Flower', cursive;
-}
-
-.errorShow {
-    height: 3rem;
-    margin: 0;
-    color: rgba(235, 0, 0, 0.8);
+.buttons {
+    width: 22rem;
 }
 
 .btn-primary {
-    margin: 2rem 1rem;
+    float: left;
 }
 
-.btn-success {
-    margin-bottom: 1rem;
+.btn-danger {
+    float: right;
 }
+
+.details, .column-two {
+    height: 53rem;
+}
+
+.details-info {
+    height: 35.3rem;
+}
+
+.charges-info, .earnings-info {
+    height: 14.5rem;
+}
+
+.price, .tax, .tip {
+    margin: 2rem 0 0 2rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.form {
+    width: 40rem;
+}
+
+.form ul {
+    float: right;
+}
+
+.li-container {
+    margin-top: 2rem;
+}
+

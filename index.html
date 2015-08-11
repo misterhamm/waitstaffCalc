@@ -15,32 +15,101 @@
   
 <div class="container">
     <div class="row">
-        <h1>Waitstaff Calculator</h1>
+        <h1 class="text-center">Waitstaff Calculator</h1>
     </div>
     
     <div class="row">
         <div class="col-md-6 details">
             <div class="details-title">
-                <h2>Enter the Meal Details</h2>
+                <h2 class="text-center">Enter the Meal Details</h2>
             </div>
-            <form>
-                <div class="price">
-                    <p>Base Meal Price: $</p>
-                    <input type="number">
+            <div class="form-container">
+               <div class="form center-block">
+                <form class="details-info">
+                        <div class="price">
+                           <ul class="list-inline">
+                                <li><p>Base Meal Price: $</p></li>
+                                <li><input type="number"></li>
+                            </ul>
+                        </div>
+                        <div class="tax">
+                            <ul class="list-inline">
+                                <li><p>Tax Rate: %</p></li>
+                                <li><input type="number"></li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <ul class="list-inline">
+                                <li><p>Tip Percentage: %</p></li>
+                                <li><input type="number"></li>
+                            </ul>
+                        </div>
+                        <div class="buttons center-block">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            <button class="btn btn-danger btn-lg">Cancel</button>
+                        </div>
+                </form>
                 </div>
-                <div class="tax">
-                    <p>Tax Rate: %</p>
-                    <input type="number">
-                </div>
-                <div class="tip">
-                    <p>Tip Percentage: %</p>
-                    <input type="number">
-                </div>
-            </form>
+            </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-6 column-two">
+           
+            <div class="charges">
+                <div class="charges-title">
+                    <h2 class="text-center">Customer Charges</h2>
+                </div>
+                <div class="charges-info">
+                    <div class="li-container">
+                            <div class="subtotal">
+                               <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Subtotal</p></li>
+                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                </ul>
+                            </div>
+                            <div class="Tip">
+                                <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Tip</p></li>
+                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                </ul>
+                            </div>
+                            <div class="total">
+                                <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Total</p></li>
+                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                </ul>
+                            </div>  
+                    </div>        
+                </div>
+            </div>
             
+            <div class="earnings">
+                <div class="earnings-title">
+                    <h2 class="text-center">My Earnings Info</h2>
+                </div>
+                <div class="earnings-info">
+                    <div class="li-container">
+                            <div class="subtotal">
+                               <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Tip Total:</p></li>
+                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                </ul>
+                            </div>
+                            <div class="Tip">
+                                <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Meal Count:</p></li>
+                                    <li class="col-md-6 text-left"><p>0</p></li>
+                                </ul>
+                            </div>
+                            <div class="total">
+                                <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Average Tip Per Meal:</p></li>
+                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                </ul>
+                            </div>  
+                    </div>       
+                </div>
+            </div>
         </div>
     </div>
 </div>
