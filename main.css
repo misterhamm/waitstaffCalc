@@ -49,7 +49,7 @@ p {
 }
 
 .form {
-    width: 40rem;
+    width: 29rem;
 }
 
 .form ul {
@@ -60,3 +60,7 @@ p {
     margin-top: 2rem;
 }
 
+input {
+    padding-left: 1rem;
+    width: 8rem;
+}

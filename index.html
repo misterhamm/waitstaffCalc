@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="calcApp">
 <head>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
@@ -11,7 +11,7 @@
     <title>Waitstaff Calculator</title>
 </head>
 
-<body ng-controller="MyCtrl">
+<body ng-controller="calcCtrl">
   
 <div class="container">
     <div class="row">
@@ -25,28 +25,31 @@
             </div>
             <div class="form-container">
                <div class="form center-block">
-                <form class="details-info">
+                <form class="details-info" name="detailsInfo" novalidate ng-submit="detailsInfo.$valid&&customerPrice(menuPrice, tax, tip)">
                         <div class="price">
                            <ul class="list-inline">
                                 <li><p>Base Meal Price: $</p></li>
-                                <li><input type="number"></li>
+                                <li><input id="menuPrice" type="number" ng-model="menuPrice" name="menuPrice" min="0" step="any" required></li>
+                                <li ng-if="detailsInfo.$submitted" ng-messages="detailsInfo.menuPrice.$error">
+                                    <span class="error" ng-message="required"><p>Field is required!</p></span>
+                                </li>
                             </ul>
                         </div>
                         <div class="tax">
                             <ul class="list-inline">
                                 <li><p>Tax Rate: %</p></li>
-                                <li><input type="number"></li>
+                                <li><input type="number" ng-model="tax" name="tax" min="0" step="any" required></li>
                             </ul>
                         </div>
                         <div class="tip">
                             <ul class="list-inline">
                                 <li><p>Tip Percentage: %</p></li>
-                                <li><input type="number"></li>
+                                <li><input id="tip" type="number" ng-model="tip"  min="0" step="any" required></li>
                             </ul>
                         </div>
                         <div class="buttons center-block">
                             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                            <button class="btn btn-danger btn-lg">Cancel</button>
+                            <button type="reset" class="btn btn-danger btn-lg" ng-click="reset()">Cancel</button>
                         </div>
                 </form>
                 </div>
@@ -64,19 +67,19 @@
                             <div class="subtotal">
                                <ul class="list-inline">
                                     <li class="col-md-6 text-right"><p>Subtotal</p></li>
-                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ subtotal | number:2 }}</p></li>
                                 </ul>
                             </div>
                             <div class="Tip">
                                 <ul class="list-inline">
                                     <li class="col-md-6 text-right"><p>Tip</p></li>
-                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ tipDisplay | number:2 }}</p></li>
                                 </ul>
                             </div>
                             <div class="total">
                                 <ul class="list-inline">
                                     <li class="col-md-6 text-right"><p>Total</p></li>
-                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ total | number:2 }}</p></li>
                                 </ul>
                             </div>  
                     </div>        
@@ -92,19 +95,19 @@
                             <div class="subtotal">
                                <ul class="list-inline">
                                     <li class="col-md-6 text-right"><p>Tip Total:</p></li>
-                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ tipTotal | number:2 }}</p></li>
                                 </ul>
                             </div>
                             <div class="Tip">
                                 <ul class="list-inline">
                                     <li class="col-md-6 text-right"><p>Meal Count:</p></li>
-                                    <li class="col-md-6 text-left"><p>0</p></li>
+                                    <li class="col-md-6 text-left"><p>{{ mealTotal }}</p></li>
                                 </ul>
                             </div>
                             <div class="total">
                                 <ul class="list-inline">
                                     <li class="col-md-6 text-right"><p>Average Tip Per Meal:</p></li>
-                                    <li class="col-md-6 text-left"><p>$0.00</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ tipAvg | number:2 }}</p></li>
                                 </ul>
                             </div>  
                     </div>       
