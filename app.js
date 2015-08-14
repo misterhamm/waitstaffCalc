@@ -9,11 +9,17 @@ var calcApp = angular.module('calcApp', ['ngMessages'])
         $scope.tipTotal = 0;
         $scope.mealTotal = 0;
         $scope.tipAvg = 0;
+        $scope.tip = 0;
         
         // ng-onclick function
         $scope.customerPrice = function(menuPrice, tax, tip) {
             // Subtotal (Price + Tax)
             $scope.subtotal = menuPrice + (menuPrice * (tax/100));
+            
+            // Handle no tip
+            if ($scope.tip == "") {
+                $scope.tip = 0;
+            };
             
             // Tip (Price * Tax %)
             $scope.tipDisplay = menuPrice * (tip/100);
@@ -31,10 +37,10 @@ var calcApp = angular.module('calcApp', ['ngMessages'])
             $scope.tipAvg = $scope.tipTotal / $scope.mealTotal;
             
             // Reset Inputs
-            document.getElementById("menuPrice").value = "";
-            document.getElementById("tip").value = "";
-            
-            
+            $scope.menuPrice = "";
+            $scope.tip = "";
+            $scope.detailsInfo.$setPristine();
+                        
         };
         
         $scope.reset = function() {
@@ -42,6 +48,9 @@ var calcApp = angular.module('calcApp', ['ngMessages'])
             $scope.tipDisplay = 0;
             $scope.total = 0;
             $scope.tax = 6.25;
+            $scope.menuPrice = "";
+            $scope.tip = "";
+            $scope.detailsInfo.$setPristine();
         };
         
     });

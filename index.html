@@ -30,8 +30,8 @@
                            <ul class="list-inline">
                                 <li><p>Base Meal Price: $</p></li>
                                 <li><input id="menuPrice" type="number" ng-model="menuPrice" name="menuPrice" min="0" step="any" required></li>
-                                <li ng-if="detailsInfo.$submitted" ng-messages="detailsInfo.menuPrice.$error">
-                                    <span class="error" ng-message="required"><p>Field is required!</p></span>
+                                <li ng-if="detailsInfo.$submitted&&detailsInfo.$invalid" ng-messages="detailsInfo.menuPrice.$error">
+                                    <span class="error" ng-message="required">Field is required!</span>
                                 </li>
                             </ul>
                         </div>
@@ -44,12 +44,12 @@
                         <div class="tip">
                             <ul class="list-inline">
                                 <li><p>Tip Percentage: %</p></li>
-                                <li><input id="tip" type="number" ng-model="tip"  min="0" step="any" required></li>
+                                <li><input id="tip" type="number" ng-model="tip"  min="0" step="any" ng-focus="tip=''"></li>
                             </ul>
                         </div>
                         <div class="buttons center-block">
                             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                            <button type="reset" class="btn btn-danger btn-lg" ng-click="reset()">Cancel</button>
+                            <button type="button" class="btn btn-danger btn-lg" ng-click="reset()">Cancel</button>
                         </div>
                 </form>
                 </div>
