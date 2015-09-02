@@ -1,6 +1,22 @@
-var calcApp = angular.module('calcApp', ['ngMessages'])
-    
-    calcApp.controller('calcCtrl', function($scope) {
+angular.module('calcApp', ['ngMessages', 'ngRoute'])
+    .config(function($routeProvider) {
+        $routeProvider.when('/', {
+            templateUrl: './home.html',
+            controller: 'HomeCtrl'
+        })
+        .when('/meal', {
+            templateUrl: './meal.html',
+            controller: 'calcCtrl'
+        })
+        .when('/earnings', {
+            templateUrl: './earnings.html',
+            controller: 'calcCtrl'
+        })
+    })
+        
+        
+        
+    .controller('calcCtrl', function($scope) {
         
         $scope.tax = 6.25;
         $scope.subtotal = 0;

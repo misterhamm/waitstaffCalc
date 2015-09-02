@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container">
+   <div class="row">
+    <div class="col-md-6 details">
+            <div class="details-title">
+                <h2 class="text-center">Enter the Meal Details</h2>
+            </div>
+            <div class="form-container">
+               <div class="form center-block">
+                <form class="details-info" name="detailsInfo" novalidate ng-submit="detailsInfo.$valid&&customerPrice(menuPrice, tax, tip)">
+                        <div class="price">
+                           <ul class="list-inline">
+                                <li><p>Base Meal Price: $</p></li>
+                                <li><input id="menuPrice" type="number" ng-model="menuPrice" name="menuPrice" min="0" step="any" required></li>
+                                <li ng-if="detailsInfo.$submitted&&detailsInfo.$invalid" ng-messages="detailsInfo.menuPrice.$error">
+                                    <span class="error" ng-message="required">Field is required!</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tax">
+                            <ul class="list-inline">
+                                <li><p>Tax Rate: %</p></li>
+                                <li><input type="number" ng-model="tax" name="tax" min="0" step="any" required></li>
+                            </ul>
+                        </div>
+                        <div class="tip">
+                            <ul class="list-inline">
+                                <li><p>Tip Percentage: %</p></li>
+                                <li><input id="tip" type="number" ng-model="tip"  min="0" step="any" ng-focus="tip=''"></li>
+                            </ul>
+                        </div>
+                        <div class="buttons center-block">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            <button type="button" class="btn btn-danger btn-lg" ng-click="reset()">Cancel</button>
+                        </div>
+                </form>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="charges">
+                <div class="charges-title">
+                    <h2 class="text-center">Customer Charges</h2>
+                </div>
+                <div class="charges-info">
+                    <div class="li-container">
+                            <div class="subtotal">
+                               <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Subtotal</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ subtotal | number:2 }}</p></li>
+                                </ul>
+                            </div>
+                            <div class="Tip">
+                                <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Tip</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ tipDisplay | number:2 }}</p></li>
+                                </ul>
+                            </div>
+                            <div class="total">
+                                <ul class="list-inline">
+                                    <li class="col-md-6 text-right"><p>Total</p></li>
+                                    <li class="col-md-6 text-left"><p>$ {{ total | number:2 }}</p></li>
+                                </ul>
+                            </div>  
+                    </div>        
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+</body>
+</html>
