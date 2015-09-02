@@ -1,3 +1,10 @@
+body {
+    background-image: url(restaurant-690569_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+}
+
 .details-title, 
 .charges-title, 
 .earnings-title, 
@@ -7,19 +14,29 @@
     border: 3px solid black;
 }
 .title {
-    font-size: 6em;
+    font-size: 5em;
 }
 
 .nav {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
-    
+
+a {
+    color: #416FA0;
+    font-weight: bold;
+}
+
+.desc {
+    margin-top: 4rem;
+    padding: 1rem;
+}
+
 .earnings {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .btn {
-    margin-top: 6rem;
+    margin-top: 1rem;
     box-shadow: 4px 4px 1px rgba(50, 50, 50, 0.75);
 }
 
@@ -35,20 +52,21 @@
     float: right;
 }
 
-.details, .column-two {
-    height: 53rem;
+.details-title, .charges-title, .form-container, .charges-info, .desc, .earnings-title, .earnings-info {
+    background-color: rgba(0,0,0,0.9);
+    border-color: rgba(50, 50, 50, 0.75);
 }
 
 .details-info {
-    height: 35.3rem;
+    height: 21rem;
 }
 
 .charges-info, .earnings-info {
-    height: 14.5rem;
+    height: 14rem;
 }
 
 .price, .tax, .tip {
-    margin: 2rem 0 0 2rem;
+    margin: 1rem 0 0 1rem;
 }
 
 p {
@@ -70,6 +88,7 @@ p {
 input {
     padding-left: 1rem;
     width: 8rem;
+    color: #000;
 }
 
 .error {
@@ -78,5 +97,5 @@ input {
 }
 
 .list-inline {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
 }
