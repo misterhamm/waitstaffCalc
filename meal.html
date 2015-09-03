@@ -30,7 +30,7 @@
                         </div>
                         <div class="buttons center-block">
                             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                            <button type="button" class="btn btn-danger btn-lg" ng-click="reset()">Cancel</button>
+                            <button type="button" class="btn btn-danger btn-lg" ng-click="cancel()">Cancel</button>
                         </div>
                 </form>
                 </div>
@@ -46,19 +46,19 @@
                     <div class="li-container">
                             <div class="subtotal">
                                <ul class="list-inline">
-                                    <li class="col-md-6 text-right"><p>Subtotal</p></li>
+                                    <li class="col-md-6 text-right"><p>Subtotal:</p></li>
                                     <li class="col-md-6 text-left"><p>$ {{ subtotal | number:2 }}</p></li>
                                 </ul>
                             </div>
                             <div class="Tip">
                                 <ul class="list-inline">
-                                    <li class="col-md-6 text-right"><p>Tip</p></li>
+                                    <li class="col-md-6 text-right"><p>Tip:</p></li>
                                     <li class="col-md-6 text-left"><p>$ {{ tipDisplay | number:2 }}</p></li>
                                 </ul>
                             </div>
                             <div class="total">
                                 <ul class="list-inline">
-                                    <li class="col-md-6 text-right"><p>Total</p></li>
+                                    <li class="col-md-6 text-right"><p>Total:</p></li>
                                     <li class="col-md-6 text-left"><p>$ {{ total | number:2 }}</p></li>
                                 </ul>
                             </div>  

@@ -53,11 +53,11 @@ angular.module('calcApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
             // Reset Inputs
             $scope.menuPrice = "";
             $scope.tip = "";
-            $scope.detailsInfo.$setPristine();
+            /*$scope.detailsInfo.$setPristine();*/
                         
         };
         
-        $scope.reset = function() {
+        $scope.cancel = function() {
             $scope.subtotal = 0;
             $scope.tipDisplay = 0;
             $scope.total = 0;
@@ -66,5 +66,13 @@ angular.module('calcApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
             $scope.tip = "";
             $scope.detailsInfo.$setPristine();
         };
-        
+    
+        $scope.reset = function() {
+            $scope.tipTotal = 0;
+            $scope.mealTotal = 0;
+            $scope.tipAvg = 0;
+            $scope.subtotal = 0;
+            $scope.tipDisplay = 0;
+            $scope.total = 0;
+        };
     });

@@ -110,6 +110,10 @@ input {
     font-size: 1rem;
 }
 
+.btn-reset {
+    margin-top: 1rem;
+}
+
 .list-inline {
     margin-bottom: 0.5rem;
 }
