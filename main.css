@@ -117,7 +117,7 @@ input {
 .animate-view-container { position:relative; min-height: 100%;}
 .animate-view.ng-enter,
 .animate-view.ng-leave {
-		transition:1s linear all;
+		transition:0.33s linear all;
 		position:absolute;
 		top:0;
 		left:0;
