@@ -18,7 +18,7 @@ body {
 }
 
 .nav {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 a {
@@ -36,7 +36,6 @@ a {
 }
 
 .btn {
-    margin-top: 1rem;
     box-shadow: 4px 4px 1px rgba(50, 50, 50, 0.75);
 }
 
@@ -52,17 +51,32 @@ a {
     float: right;
 }
 
-.details-title, .charges-title, .form-container, .charges-info, .desc, .earnings-title, .earnings-info {
+.details-title, 
+.charges-title, 
+.form-container, 
+.charges-info, 
+.desc, 
+.earnings-title, 
+.earnings-info {
     background-color: rgba(0,0,0,0.9);
     border-color: rgba(50, 50, 50, 0.75);
 }
 
+.details-title,
+.charges-title {
+    margin-top: 0;
+}
+
+.text-center {
+    margin-top: 1rem;
+}
+
 .details-info {
-    height: 21rem;
+    height: 19rem;
 }
 
 .charges-info, .earnings-info {
-    height: 14rem;
+    height: 13rem;
 }
 
 .price, .tax, .tip {
@@ -82,7 +96,7 @@ p {
 }
 
 .li-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 input {
