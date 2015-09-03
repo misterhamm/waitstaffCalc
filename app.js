@@ -24,6 +24,7 @@ angular.module('calcApp', ['ngMessages', 'ngRoute', 'ngAnimate'])
         $scope.mealTotal = 0;
         $scope.tipAvg = 0;
         $scope.tip = 0;
+
         
         // ng-onclick function
         $scope.customerPrice = function(menuPrice, tax, tip) {
